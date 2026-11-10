@@ -1,0 +1,456 @@
+{
+  "company": {
+    "name": "Ayoub Haddoudi, trading as Plata services",
+    "address": "Sint Petrusstraat 33, 6136 XM Sittard, the Netherlands",
+    "kvk": "97239895",
+    "email": "support@notstock.app",
+    "privacyEmail": "privacy@notstock.app",
+    "dsaEmail": "legal@notstock.app",
+    "creatorsEmail": "creators@notstock.app",
+    "website": "https://notstock.app",
+    "country": "the Netherlands"
+  },
+  "updated": "10 November 2026",
+  "version": "2026-11-02.1",
+  "docs": [
+    {
+      "key": "privacy",
+      "title": "Privacy Policy",
+      "summary": "What we collect, why, who helps us, how long we keep it, and your rights.",
+      "sections": [
+        {
+          "heading": "Who we are",
+          "body": [
+            "Not Stock (previously called GoFast) is run by Ayoub Haddoudi, trading as Plata services, Sint Petrusstraat 33, 6136 XM Sittard, the Netherlands (KvK 97239895). Email: support@notstock.app. We are the \"controller\" of your personal data under the EU General Data Protection Regulation (GDPR).",
+            "Questions or requests about your data: privacy@notstock.app. We answer within one month.",
+            "Last updated: 10 November 2026."
+          ]
+        },
+        {
+          "heading": "The short version",
+          "body": [
+            "You decide how social you want to be. New accounts start private (\"Friends\"). You can go fully Anonymous at any time with the eye button on the map.",
+            "We don't sell your data, we don't show ads, and we don't use tracking or analytics tools.",
+            "You can download all your data and delete your account in the app (Menu → Your data)."
+          ]
+        },
+        {
+          "heading": "What we collect and why",
+          "body": [
+            "Account: your email address and password (the password is stored encrypted by our hosting provider; we can't see it). If you sign in with Apple or Google instead, we receive from them only your name, your email address (with Apple you can choose to hide it: we then get a private relay address that forwards to you) and a random account ID; we never get your Apple or Google password, and we don't get your contacts or other data. Needed to give you an account (contract).",
+            "Profile (optional): display name, photo, city, your build, bio, Instagram / TikTok / YouTube handles, account type and privacy choices. Used to show your profile to the people you allow (contract).",
+            "Drive mode (background location): after you open Not Stock it stays ready in the background for up to 15 minutes, and while you drive it keeps using your location in the background to warn you, also when another app is open or the screen is locked. It stops 15 minutes after you park or when you switch it off. With Pro auto-start (optional, needs \"Always\" location access) Not Stock also starts by itself when the phone moves faster than 15 km/h, and between drives it only remembers a 200 m area around where you stopped, on your phone, to wake up when you leave. This location use happens on your phone: it is not sent to or stored by Not Stock, except to download the reports and cameras around you (we receive the area you ask for, not who you are). You can switch it off in Menu → Drive mode or in your phone's settings. Legal basis: your consent.",
+            "Location: used on your phone for the map, navigation and warnings. It is only sent to us when you: report something (the report's location), write in Game chat (rounded to about 1 km), turn on \"Show me on the map\" (your position, rounded to about 100 m, kept for 1 day), share your live location in a drive session (only with that session), or list a car for sale (the city or a rough area). Your parking spot stays on your phone. Legal basis: your consent (phone permission and these switches) and the contract.",
+            "Your content: posts, photos, comments, likes, chat messages, voice messages, hazard reports and votes, cars in your garage (including the number plate, mods and service history), listings and offers, community posts and car meets. Used to provide those features (contract).",
+            "Private chats: the messages you send and receive (text or a location you choose to share), when they were sent and opened, who saved them, your chat settings (who may message you, friend requests on or off) and your friends list. Used to deliver your chats (contract). We don't read your chats. A moderator only sees a message when someone reports it: the report contains a copy of that one message (legitimate interest: safety).",
+            "Saved: the posts, cars for sale, community posts and car meets you save, when you saved them, and for cars the price at that moment (to show price changes). Only you can see your saves; the person who posted it is never told who saved it. Used to provide the feature (contract).",
+            "Fuel prices you share: the station, fuel, price and time (shown to everyone without your name). Used to show the cheapest station (contract).",
+            "Pro and extras: whether you have Pro (and until when), free months from invites, your OG badge, your invite code and who joined with it, and the performance meter times you choose to save (time, speed, which car). Used to provide those features (contract).",
+            "Creators: your Creator plan (from the App Store, via RevenueCat), whether your profile is a creator profile, who follows you and when (to show your follower stats), and, if you ask for the blue check, the Instagram or TikTok username you give, the follower count you state, the code we give you, the result and the reason. A Not Stock team member looks at your public Instagram or TikTok profile to check the code and that the followers are real. Used to provide creator profiles and to verify creators (contract), and to prevent impersonation (legitimate interest).",
+            "Safety and abuse prevention: reports you file, people you block, limits on how often you can post, and technical logs (such as IP address and device type) kept by our hosting provider for security. Legal basis: our legitimate interest in keeping Not Stock safe and secure.",
+            "Settings on your phone: theme, sounds, filters and similar preferences are stored on your device only (see \"Cookies & device storage\").",
+            "Drive diagnostics (only if you switch it on in Menu → Drive mode → Testing): a small log of what Drive mode did, such as when GPS updates came in, your rounded speed, which warning types were given and any errors. No locations. Deleted automatically after 7 days. Used to fix problems (your consent)."
+          ]
+        },
+        {
+          "heading": "Who else processes data (and why)",
+          "body": [
+            "Supabase (hosting, database, login and file storage), in the EU (Ireland). They act as our processor under a data processing agreement.",
+            "Anthropic (AI features \"Describe it\" search and \"Know your car\"), only after you agree in the app. We send only what the feature needs: your search text and rough location, or your car's make, model, year, engine and tune stage. Not your name or email. Anthropic is in the United States; transfers are covered by the EU Standard Contractual Clauses.",
+            "Map and routing services: Apple Maps shows the map; search suggestions and routes are calculated by OpenStreetMap-based services (Photon by komoot, Valhalla by FOSSGIS and OSRM). They receive your search text and route start and end points, not your account details. Road closures come from NDW (Dutch road authority open data); national fuel prices from CBS.",
+            "RDW (the Dutch vehicle authority) when you look up a number plate: the plate is sent to RDW's public open data service.",
+            "Apple and Google deliver notifications we schedule on your phone. If you choose \"Sign in with Apple\" or \"Continue with Google\", Apple or Google confirms who you are to us; their own privacy policies apply to what you do in their sign-in screen.",
+            "Payments for Not Stock Pro are handled by Apple (App Store). We never see your card or bank details. To know whether you have Pro, we use RevenueCat (USA): it receives your random Not Stock account ID, your purchase history (product, dates, price, country), and basic device and app information. Transfers to the USA are covered by the EU Standard Contractual Clauses. Legal basis: the contract (your subscription) and our legal duty to keep financial records.",
+            "We never sell personal data. We only share it when the law requires us to (for example a court order)."
+          ]
+        },
+        {
+          "heading": "Who can see what",
+          "body": [
+            "Public: everyone on Not Stock can see your profile and posts. Private (\"friends only\"): others only see your name, @username, bio and follower counts; your photo, posts, garage, city and socials are only for accepted friends and people in your drive session. Anonymous: nobody can see or find your profile or posts, and your name is hidden in chats.",
+            "Your garage has its own setting: everyone who can see your profile, friends only, or only you. Single cars can also be hidden. A car you put up for sale is visible in its listing to everyone, because that's what a listing is for.",
+            "Search: other drivers can find public and private accounts by @username or name (a private account only shows its small card). Anonymous accounts never appear in search.",
+            "Menu → Privacy & safety shows a table of exactly what others and your friends can see with your current settings.",
+            "Online status: your accepted friends can see when you're online or driving (a red dot, or 🚗) and when you were last active, up to 7 days back. Strangers never see it. Switch it off with \"Show my friends when I'm online\". We only keep the time you were last active and whether you're driving, overwritten each minute, and delete it with your account.",
+            "Hazard reports never show who made them.",
+            "Party chat is visible to the members of that session. Game chat is visible to drivers in the area for 2 days.",
+            "Party invites: you can only invite your accepted friends. They see your name and the party name. Invites expire after 2 hours and are deleted with the party (after 30 days at most).",
+            "Private chats are only visible to the two of you. Remember that the other person can save a message or take a screenshot, so only send what you're okay with them keeping.",
+            "You choose who can message you: everyone (new people arrive as a message request, max 3 messages until you reply), friends only, or nobody. Creator profiles are public, can be followed by anyone, and can't receive friend requests.",
+            "Communities: in a public community everyone can see the posts, meets and members. In a private community anyone can see the name, about text, rules and member count, but only members see the posts, meets and member list. A hidden community is only visible to its members and the people they invite. Leaving a community doesn't delete what you posted there; delete it yourself first if you want it gone.",
+            "When you ask to join a community, its admins and moderators see your profile and your answers to their questions. They decide who gets in. Admins and moderators of a community can also see who is muted or banned there, and a log of what the moderators did (with names).",
+            "Listings are public, including the contact details you choose to add.",
+            "Saved performance times can be seen by the people who can see your profile, and on the leaderboard by your friends. The Pro crown and OG badge are shown on your profile."
+          ]
+        },
+        {
+          "heading": "How long we keep it",
+          "body": [
+            "Private chat messages: deleted 24 hours after they are sent (removed within the following hour), unless you or the other person saved them; saved messages stay until both of you unsave them, either of you clears the chat for yourself, or an account is deleted. A reported message is kept until the report is handled (max 1 year). Shared fuel prices: 90 days.",
+            "Your position on the map: 1 day. Game chat: 2 days. Voice messages: 7 days. Hazard reports: until they expire plus 7 days. Party chat and session pins: 30 days. The private link between you and a hazard report (used only to stop spam, never shown): 30 days. Content reports that have been handled: 1 year.",
+            "Your profile, garage, posts, listings and other content: until you delete them or your account.",
+            "Saved items: until you remove them or delete your account. If the original is deleted or made private, it no longer shows in your Saved.",
+            "Blue-check requests (username, stated followers, code, result): as long as your account exists, so we can see who was verified and why.",
+            "Community join requests and your answers: until an admin decides, then 30 days. Community invites: 30 days. Community bans and mutes: until they end, plus 30 days (permanent bans until lifted). The community moderation log: 1 year. Counters used to stop spam (how often you posted, commented, voted, joined or invited): 2 days.",
+            "Your subscription status, free months and OG badge: as long as your account exists. Apple keeps the payment records itself; we don't receive card details.",
+            "When you delete your account, everything linked to it is erased right away, including your photos. Copies in our hosting provider's backups disappear within 30 days. Hazard reports you made stay on the map without your name until they expire, and communities you started are handed to another member."
+          ]
+        },
+        {
+          "heading": "Your rights",
+          "body": [
+            "You can access, correct, download (portability), and delete your data, object to processing based on legitimate interest, restrict processing, and withdraw consent at any time (for example by switching off location, \"Show me on the map\" or AI features). Withdrawing consent doesn't affect what was done before.",
+            "Most of this you can do yourself in the app: Menu → Edit profile, Privacy, Your data. For anything else, email privacy@notstock.app.",
+            "You can complain to the Dutch data protection authority, the Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl), or the authority where you live."
+          ]
+        },
+        {
+          "heading": "Age",
+          "body": [
+            "Not Stock is for people aged 16 and over. If you are younger, please don't use it. If we learn that someone under 16 has an account, we delete it."
+          ]
+        },
+        {
+          "heading": "No automated decisions",
+          "body": [
+            "We don't make decisions about you based only on automated processing that have legal or similarly significant effects. Our word filter only masks offensive words."
+          ]
+        },
+        {
+          "heading": "Security",
+          "body": [
+            "Data is encrypted in transit, access is restricted with database rules, and we limit how much each account can post to stop abuse. No system is perfect: if a data breach affects you, we will tell you and the authorities as the law requires."
+          ]
+        },
+        {
+          "heading": "Changes",
+          "body": [
+            "If we change this policy in a meaningful way, we'll tell you in the app and, where needed, ask you to accept again."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "terms",
+      "title": "Terms of Use",
+      "summary": "The agreement between you and Not Stock.",
+      "sections": [
+        {
+          "heading": "About these terms",
+          "body": [
+            "These terms are an agreement between you and Ayoub Haddoudi, trading as Plata services, who runs the Not Stock app (previously called GoFast). By creating an account you accept them. Dutch law applies; the courts of the Netherlands have jurisdiction, but if you are a consumer you keep the protection of the law where you live.",
+            "Last updated: 10 November 2026."
+          ]
+        },
+        {
+          "heading": "Drive safely, and obey the law",
+          "body": [
+            "You are always responsible for how you drive. Keep your eyes on the road, follow traffic rules and speed limits, and do not hold or operate your phone while driving (in the Netherlands this is illegal; use a phone holder and voice features, or let a passenger operate the app).",
+            "Warnings, routes, speed limits and camera locations come from users and open data and can be wrong, late or missing. Never rely on them instead of your own eyes and the road signs.",
+            "Speed camera warnings are not allowed everywhere. Not Stock switches them off automatically where we know they are banned (for example Germany and Switzerland), but you are responsible for following local law.",
+            "Not Stock is not for racing or for avoiding the police. Don't use it for anything illegal.",
+            "Not Stock does not support, encourage or reward speeding, street racing, stunts or any other dangerous driving. Speed and camera warnings exist to help you keep to the limit. The performance meter is only for closed tracks and private ground with permission; you confirm this before a run is saved or shared, and runs on public roads are not allowed.",
+            "Drive mode keeps warnings going in the background and (with Pro) can start by itself. It depends on your phone: iOS or Android can pause or stop apps in the background (for example with low battery or Low Power Mode), so a warning can be missed. Never rely on Not Stock alone: always watch the road and the signs. Drive mode uses GPS and battery like any navigation app.",
+            "Typing is switched off while the phone is moving at driving speed. Use voice and the walkie-talkie, pull over, or let a passenger use the app. Choosing \"I'm a passenger\" while you are actually driving is a breach of these terms.",
+            "Warnings, speed limits, sections and reports come from public data and other drivers and can be wrong or missing. Always follow the road signs and the police; Not Stock is not liable for fines, accidents or damage caused by how you drive."
+          ]
+        },
+        {
+          "heading": "Your account",
+          "body": [
+            "You must be 16 or older. Give correct information, keep your password (or your Apple or Google account) safe, and don't share your account.",
+            "Every @username is unique. Names that only differ by dots, underscores or look-alike characters (like 0 and o) count as the same name, and names that pretend to be Not Stock or someone else are not allowed.",
+            "You can sign in with email and password, Sign in with Apple or Continue with Google. If they use the same (confirmed) email address, they open the same Not Stock account. If you hide your email with Apple, that becomes a separate account, so keep signing in the same way.",
+            "You can delete your account at any time in the app (Menu → Your data)."
+          ]
+        },
+        {
+          "heading": "Creator profiles and the blue check",
+          "body": [
+            "A creator profile is for influencers, car pages and clubs. It needs a Creator plan (see the Subscription terms). It is public, people follow it, and it can't receive friend requests. You can switch back to a driver profile at any time.",
+            "The blue check means one thing: the Not Stock team checked that this creator owns the linked Instagram or TikTok account and has at least 5,000 real followers there. It is not for sale and is not included in any plan. It says nothing about the person's identity beyond that account, and it is not an endorsement by Not Stock.",
+            "To ask for it you give your username and follower count, and put the code we give you in your bio. We may refuse it, or remove it later, for example for bought or fake followers, pretending to be someone else, a username change to a different person or brand, or serious breaches of these terms. When your profile stops being a creator profile, the blue check is removed.",
+            "Creators must follow the law on advertising: if you are paid or get something for free to promote a product, say so clearly in your post (for example #ad or \"paid partnership\")."
+          ]
+        },
+        {
+          "heading": "Your content",
+          "body": [
+            "You keep ownership of what you post (photos, posts, messages, listings). You give Not Stock a free, worldwide licence to host, show and share it inside the app to the people you allow, only to run Not Stock. This licence ends when you delete the content or your account (except reports that stay on the map anonymously until they expire).",
+            "Only post what you have the right to post. Follow the Community Guidelines.",
+            "Other drivers who can see your posts, listings and meets can save them in their private \"Saved\" list. Saving is only a bookmark: it gives no right to copy, download or re-post your content. When you delete something or make it private, it disappears from everyone's Saved."
+          ]
+        },
+        {
+          "heading": "Communities",
+          "body": [
+            "Anyone can start a community (free: 1, Pro: up to 5) and becomes its admin. Admins decide how it works: public, private (people ask to join) or hidden (invite only), questions for new members, rules, a welcome message, post tags, whether new posts need approval, slow mode, and how long new members wait before posting. Admins can appoint moderators and other admins.",
+            "The person who started a community, or its last admin, can delete it. Everything in it (posts, replies, meets, memberships) is then deleted for everyone and can't be restored. This isn't possible while reports on its content are still open.",
+            "Admins and moderators may approve or decline join requests, approve, remove, pin or lock posts, remove comments, and mute (no posting or commenting for a while), remove or ban members of their community. They must do this fairly and following their community's rules, these terms and the Community Guidelines. Every action is logged for the community's team. Admins and moderators are members like you, not Not Stock staff.",
+            "A community's rules apply on top of ours, never instead of them. Not Stock can still remove content, change admins or close a community that breaks these terms or the law, also when the community is private or hidden. Private does not mean secret: members can see and screenshot what you post, and reported content is checked by our moderators.",
+            "To stop spam and keep Not Stock running for everyone, there are limits on how often you can post, comment, vote, join communities, invite people and report (for example 20 reports per day). If you hit one, wait a few minutes and try again."
+          ]
+        },
+        {
+          "heading": "Moderation",
+          "body": [
+            "You can report content and block people. We review reports and may remove content or limit or close accounts that break these terms, the Community Guidelines or the law. When we do, we tell you why and how to object (unless it's spam or the law doesn't allow it).",
+            "Report illegal content in the app or by email (support@notstock.app). Authorities can reach us at legal@notstock.app (English or Dutch)."
+          ]
+        },
+        {
+          "heading": "Friends and private chats",
+          "body": [
+            "You can add drivers as friends (if they allow friend requests) and chat privately with drivers who accept messages from you. You decide who can message you in Settings → Privacy & safety: everyone, friends only, or nobody.",
+            "Messages disappear 24 hours after sending unless one of you saves them. Disappearing doesn't mean secret: the other person can save or screenshot a message, so never send anything you wouldn't want kept.",
+            "Don't use chat to harass, threaten, spam, scam, sell illegal things, organise street races, or send sexual content. Never ask anyone for nude pictures, and never contact people you know are under 16. Breaking these rules can get your account closed and, where the law requires it, reported to the police.",
+            "Report a message by long-pressing it. The report sends a copy of that message to our moderators. Block someone to end the chat for both of you immediately.",
+            "Typing is switched off while you're driving. Read and reply only when you've stopped safely, or let a passenger do it."
+          ]
+        },
+        {
+          "heading": "Not Stock Pro (subscription)",
+          "body": [
+            "Not Stock is free to use. Not Stock Pro is an optional paid subscription with extra features. The full conditions are in the Subscription terms (Menu → Legal). Apple's standard Licensed Application End User License Agreement also applies to your use of the app.",
+            "Safety features (hazard and police warnings and reporting) are always free."
+          ]
+        },
+        {
+          "heading": "Marketplace",
+          "body": [
+            "Not Stock only lets people find each other. Sales are directly between buyer and seller; we are not a party to them and don't check cars, prices or people. Check the car, its papers and the seller before you pay. Never pay in advance to someone you haven't met."
+          ]
+        },
+        {
+          "heading": "AI features",
+          "body": [
+            "Some features use AI to suggest places or describe common problems and service items for your car. AI can be wrong. Always check with your manual or a mechanic before acting on it."
+          ]
+        },
+        {
+          "heading": "Partners and links",
+          "body": [
+            "Some links (for example to parts shops or breakdown services) may earn Not Stock a commission. That doesn't change your price. We are not responsible for other companies' products or websites."
+          ]
+        },
+        {
+          "heading": "Maps, navigation and warnings",
+          "body": [
+            "YOUR USE OF THIS REAL-TIME ROUTE GUIDANCE APPLICATION IS AT YOUR SOLE RISK. LOCATION DATA MAY NOT BE ACCURATE.",
+            "Maps are provided by Apple (Apple Maps). Routes, road closures, cameras and reports come from other sources and from other drivers, and can be incomplete, late or wrong. Always follow the road signs, the traffic rules and the situation on the road; they come first.",
+            "Not Stock is not an emergency service and is not made for controlling a vehicle. In an emergency, call 112."
+          ]
+        },
+        {
+          "heading": "Availability and liability",
+          "body": [
+            "Not Stock is provided \"as is\". We work hard to keep it running, but we can't promise it's always available or error-free.",
+            "To the extent the law allows, we are not liable for indirect damage, or for damage caused by relying on warnings, routes, camera data, AI suggestions, marketplace deals or other users' content. Nothing in these terms limits liability that can't be limited by law (such as for intent or gross negligence)."
+          ]
+        },
+        {
+          "heading": "Changes",
+          "body": [
+            "We may update these terms. If a change matters to you, we'll tell you in the app before it takes effect and ask you to accept again.",
+            "We improve the app regularly. Small updates (fixes and improvements) download automatically in the background and apply the next time you open Not Stock; bigger updates come through the App Store or Google Play. Some features may need the latest version to keep working safely."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "subscription",
+      "title": "Subscription terms",
+      "summary": "How Not Stock Pro, the Creator plans, the free trial, payment, renewal and cancelling work.",
+      "sections": [
+        {
+          "heading": "What you get",
+          "body": [
+            "Always free: the map and navigation, all hazard, police and speed camera warnings (where the law allows them), warnings in the background while you drive, reporting, party chat with your crew, game chat with a 5 km radio range, the feed, communities (start 1), the market (1 car for sale, 10 photos), 1 car in your garage with engine oil and APK reminders, and the 0–100 km/h timer.",
+            "Not Stock Pro adds: auto-start (Not Stock starts by itself when you drive), a 30 km radio range for game chat and voice, police heat (wanted stars and the red heat zones on the map), the full maintenance plan with km predictions and a reminder for every item, an unlimited garage, the performance meter for 100–200 km/h and ¼ mile plus the friends leaderboard, up to 3 cars for sale at once with 30 photos each, starting up to 5 communities, AI features (\"Describe it\" search and \"Know your car\"), personalisation (app colours, map icons, a sound per report) and the Pro crown on your profile.",
+            "If Pro ends, nothing you made is deleted: your cars, history, listings and communities stay. You just can't add more than the free limits until you subscribe again."
+          ]
+        },
+        {
+          "heading": "Plans and price",
+          "body": [
+            "Monthly: €4.99 per month. Yearly: €39.99 per year. Prices include VAT. The exact price in your country and currency is shown by the App Store before you confirm, and that price is the one that applies.",
+            "If we ever raise the price, Apple tells you first and, where the law requires, asks you to agree. If you don't, your subscription ends at the end of the period you paid for."
+          ]
+        },
+        {
+          "heading": "Creator plans",
+          "body": [
+            "Creator: €14.99 per month. A creator profile that people follow (no friend requests), the creator badge, follower stats, the right to ask for the blue check, and everything in Not Stock Pro.",
+            "Creator Plus: €39.99 per month. Everything in Creator, plus: if you have the blue check, your profile is shown under \"Featured creators\" at the top of the Feed for everyone, and you rank higher in search.",
+            "Paying for a Creator plan never gives you the blue check by itself; see \"Creator profiles and the blue check\" in the Terms of Use. Prices include VAT; the App Store shows the exact price before you confirm. Payment, automatic renewal, cancelling and refunds work the same as for Pro (below). Creator plans have no free trial.",
+            "When your Creator plan ends, your profile goes back to a driver profile and the blue check is removed. Your followers are kept, so they come back if you subscribe again."
+          ]
+        },
+        {
+          "heading": "Free trial",
+          "body": [
+            "New subscribers can get a 7-day free trial (once per Apple ID). If you don't cancel at least 24 hours before the trial ends, the subscription you chose starts automatically and your Apple ID is charged.",
+            "When you cancel during the trial, Pro stays on until the trial ends and you're not charged."
+          ]
+        },
+        {
+          "heading": "OG members",
+          "body": [
+            "The first 10,000 drivers whose first paid Pro period (after any free trial) starts in Not Stock's first year get a permanent OG badge.",
+            "If we raise the price later, OG members keep the price they signed up for as long as their subscription keeps renewing without a break. If you cancel and subscribe again later, the price at that moment applies. The OG badge itself stays forever. The badge has no cash value."
+          ]
+        },
+        {
+          "heading": "Invite friends",
+          "body": [
+            "Every 3 friends who sign up with your invite code and accept the terms give you 1 month of Pro for free. Free months are added after each other, never renew automatically and are never charged. A friend can only be counted once. We may withhold or remove rewards for fake, duplicate or abusive accounts. We may change or end the invite programme for the future; months you already earned stay."
+          ]
+        },
+        {
+          "heading": "Payment and automatic renewal",
+          "body": [
+            "You buy Pro from Apple through In-App Purchase. Payment is charged to your Apple ID when you confirm (or when the free trial ends).",
+            "The subscription renews automatically for the same period and price unless you cancel at least 24 hours before the end of the current period. Your Apple ID is charged for the renewal within 24 hours before the period ends."
+          ]
+        },
+        {
+          "heading": "Cancelling",
+          "body": [
+            "Cancel anytime: Menu → Manage subscription, or iPhone Settings → your name → Subscriptions → Not Stock. You keep Pro until the end of the period you paid for. Deleting the app or your Not Stock account does not cancel the subscription with Apple, so cancel it there as well."
+          ]
+        },
+        {
+          "heading": "Refunds and your right of withdrawal",
+          "body": [
+            "Apple handles all payments and refunds. Request a refund at reportaproblem.apple.com.",
+            "If you live in the EU, you have the right to withdraw from the purchase within 14 days without giving a reason, through Apple at reportaproblem.apple.com. Pro starts right away when you subscribe, and that use counts towards what Apple may take into account."
+          ]
+        },
+        {
+          "heading": "Your account and devices",
+          "body": [
+            "Pro is linked to your Not Stock account and your Apple ID. Use \"Restore purchases\" to get it back on a new device.",
+            "If we close your account for serious breaches of the Terms of Use, you don't get a refund for the remaining period, unless the law says otherwise."
+          ]
+        },
+        {
+          "heading": "Changes to Pro",
+          "body": [
+            "We keep improving Not Stock and may change features. We will not remove a main Pro feature during a period you already paid for without telling you in advance. If a change makes Pro clearly worse for you, you can cancel and ask Apple for a refund.",
+            "Questions: support@notstock.app."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "guidelines",
+      "title": "Community Guidelines",
+      "summary": "Keep Not Stock a good place for car people.",
+      "sections": [
+        {
+          "heading": "Be a good driver and a good person",
+          "body": [
+            "No harassment, threats, bullying or hate (about race, religion, origin, gender, sexuality, disability or anything else).",
+            "No sexual content, no nudity, and nothing involving minors.",
+            "No illegal content or activity: no street-racing invitations, no stolen cars or parts, no scams, no fake listings.",
+            "No filming or posting other people's number plates or faces to shame or expose them. No sharing someone else's private information.",
+            "No spam or misleading reports. False hazard or police reports put people at risk. Fuel prices must be what's really on the pump.",
+            "Private chats: no unwanted messages after someone ignores or blocks you, no pressuring people, no sexual messages or requests for photos, no scams or \"too good to be true\" deals. Respect \"friends only\" and \"chat off\".",
+            "Respect copyright: only post photos and videos you made or have permission to use. Saving someone's post is fine; re-posting their photos as your own is not."
+          ]
+        },
+        {
+          "heading": "Communities, admins and moderators",
+          "body": [
+            "Follow the rules of each community you join, on top of these guidelines. Use the tags the admins set, and don't spam the same post in several communities.",
+            "Private and hidden communities follow these guidelines too. Don't use them to organise street races, share stolen goods, or harass anyone.",
+            "Admins and moderators: be fair and consistent, explain your rules, don't ban people for personal reasons, and never use join questions to ask for private information such as addresses, phone numbers, ID or photos of people. Asking about someone's car or region is fine.",
+            "Don't share what was posted in a private community outside it to shame or expose someone."
+          ]
+        },
+        {
+          "heading": "What happens if someone breaks the rules",
+          "body": [
+            "Offensive words are masked automatically. Reported content is reviewed; we may remove it and warn, limit or close the account. Serious illegal content may be passed to the police.",
+            "Use Report on any post, comment, message, listing or profile, and Block to stop someone from seeing you or contacting you."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "storage",
+      "title": "Cookies & device storage",
+      "summary": "Not Stock uses no cookies for tracking and no ads or analytics.",
+      "sections": [
+        {
+          "heading": "No tracking",
+          "body": [
+            "Apps don't use browser cookies, but the same rules (the EU ePrivacy rules, in the Netherlands the Telecommunicatiewet) apply to anything an app stores on your phone. Not Stock only stores what is strictly needed for the features you use, so no consent banner is needed.",
+            "We don't use advertising, analytics, fingerprinting or cross-app tracking, so Apple's \"Ask App Not to Track\" prompt doesn't apply."
+          ]
+        },
+        {
+          "heading": "What we store on your phone",
+          "body": [
+            "Your login session (so you stay signed in).",
+            "Your settings: theme and app colour, sounds and voice, map icon, waypoint colour, chat notification choices, market filters and recent searches.",
+            "Your current parking session (location and time). This is never sent to us.",
+            "Scheduled reminders (service, parking) are kept by your phone's notification system.",
+            "You can clear all of this by signing out and deleting the app."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "safety",
+      "title": "Safety & speed cameras",
+      "summary": "How to use Not Stock safely, and where camera warnings are allowed.",
+      "sections": [
+        {
+          "heading": "Use Not Stock safely",
+          "body": [
+            "Set your route and settings before you drive. Use a phone holder. Don't type, scroll or read chats while driving: use the big buttons, voice warnings and the walkie-talkie only when it's safe, or let a passenger do it.",
+            "Warnings and camera data can be wrong or outdated. The road signs and the traffic around you always come first."
+          ]
+        },
+        {
+          "heading": "Speed camera warnings and the law",
+          "body": [
+            "Allowed in the Netherlands and Belgium, among others.",
+            "Not allowed while driving in Germany, Switzerland, Cyprus and North Macedonia. Not Stock switches camera warnings and camera markers off automatically when it detects you're in one of these countries.",
+            "France: exact camera locations may not be shown. Not Stock shows \"danger zone\" warnings there instead.",
+            "Rules change. You are responsible for following the law where you drive."
+          ]
+        },
+        {
+          "heading": "Breakdown and emergencies",
+          "body": [
+            "In an emergency call 112. The SOS screen helps you reach breakdown services but is not an emergency service."
+          ]
+        }
+      ]
+    },
+    {
+      "key": "licences",
+      "title": "Data sources & licences",
+      "summary": "Open data and software that Not Stock uses.",
+      "sections": [
+        {
+          "heading": "Map data",
+          "body": [
+            "Fixed camera locations, search suggestions and routes: © OpenStreetMap contributors, available under the Open Database License (ODbL), openstreetmap.org/copyright.",
+            "Search by komoot Photon; routing by Valhalla (FOSSGIS) and OSRM. Maps by Apple. Fuel stations: © OpenStreetMap contributors.",
+            "Road closures: NDW open data (opendata.ndw.nu). National average fuel prices: CBS, Statistics Netherlands (CC BY 4.0).",
+            "Vehicle data: RDW open data (opendata.rdw.nl)."
+          ]
+        },
+        {
+          "heading": "Software",
+          "body": [
+            "Not Stock is built with Expo and React Native and other open-source software under their own licences (MIT, Apache 2.0 and others)."
+          ]
+        }
+      ]
+    }
+  ]
+}
