@@ -25,7 +25,7 @@ body {
 }
 a { color: var(--orange-2); text-decoration: none; }
 a:hover { text-decoration: underline; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: 12px; top: 12px; background: var(--orange); color: #fff; padding: 8px 12px; border-radius: 8px; z-index: 10; }

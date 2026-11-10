@@ -71,7 +71,7 @@ function page({ path, title, description, body, nav }) {
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
-  <a class="brand" href="${r}" aria-label="Not Stock home"><img src="${r}assets/logo.png" alt="" width="52" height="31"><span class="word">Not <b>Stock</b></span></a>
+  <a class="brand" href="${r}" aria-label="Not Stock home"><img src="${r}assets/logo.svg" alt="" width="64" height="38"><span class="word">Not <b>Stock</b></span></a>
   <nav class="nav" aria-label="Main">
     <a href="${r}#market">Market</a>
     ${link('creators/', 'Creators', 'creators', 'hide-sm')}
@@ -85,7 +85,7 @@ ${body}
 <footer><div class="wrap">
   <div class="foot">
     <div>
-      <a class="brand" href="${r}"><img src="${r}assets/logo.png" alt="" width="52" height="31"><span class="word">Not <b>Stock</b></span></a>
+      <a class="brand" href="${r}"><img src="${r}assets/logo.svg" alt="" width="64" height="38"><span class="word">Not <b>Stock</b></span></a>
       <p>The app for drivers whose car isn't stock. Made in the Netherlands.</p>
     </div>
     <div>
@@ -159,7 +159,7 @@ page({
       <a class="btn btn-ghost" href="#market">How it works</a>
     </div>
   </div>
-  <div class="hero-art"><img src="./assets/logo.png" alt="The Not Stock logo: an N made of tyre marks and an S shaped like a racetrack" width="720" height="435"></div>
+  <div class="hero-art"><img src="./assets/logo.svg" alt="The Not Stock logo: an N made of tyre marks and an S shaped like a racetrack" width="1064" height="632"></div>
 </div></section>
 
 <div class="strip"><span>Tuned cars</span><span>Documented builds</span><span>Car meets</span><span>Made in NL</span></div>
