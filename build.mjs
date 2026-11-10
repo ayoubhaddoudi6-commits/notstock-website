@@ -150,6 +150,7 @@ page({
   description: 'The marketplace for tuned and modified cars, made by and for car people. Every mod and the service history in one listing. Plus meets, crews and live road warnings.',
   body: `
 <section class="hero"><div class="wrap">
+  <div class="hero-art"><img src="./assets/logo.svg" alt="The Not Stock logo: an N made of tyre marks and an S shaped like a racetrack" width="1064" height="632"></div>
   <div>
     <span class="kicker">The market for car people</span>
     <h1>Buy &amp; sell <span class="o">tuned cars.</span></h1>
@@ -159,7 +160,6 @@ page({
       <a class="btn btn-ghost" href="#market">How it works</a>
     </div>
   </div>
-  <div class="hero-art"><img src="./assets/logo.svg" alt="The Not Stock logo: an N made of tyre marks and an S shaped like a racetrack" width="1064" height="632"></div>
 </div></section>
 
 <div class="strip"><span>Tuned cars</span><span>Documented builds</span><span>Car meets</span><span>Made in NL</span></div>
