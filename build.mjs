@@ -1,7 +1,7 @@
 // Builds the Not Stock website into ./_site (plain HTML, no dependencies).
 // The legal pages come from data/legal.json, which is exported from the app's own legal texts
 // (scripts/website/export-legal.mjs in the app repo), so the website and the app always match.
-import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -31,6 +31,11 @@ const ICON = {
   gauge: '<path d="M3.5 17.5a8.5 8.5 0 1 1 17 0"/><path d="M12 17.5l4.2-6"/><circle cx="12" cy="17.5" r="1.2"/>',
   tag: '<path d="M3 12.2V4h8.2L21 13.8 13.8 21 3 12.2z"/><circle cx="7.5" cy="8.5" r="1.5"/>',
   camera: '<rect x="3" y="7" width="18" height="12" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 7l1.5-3h5L16 7"/>',
+  wrench: '<path d="M14.7 6.3a4 4 0 0 0-5.2 5.2L3.5 17.5a1.8 1.8 0 0 0 2.5 2.5l6-6a4 4 0 0 0 5.2-5.2l-2.6 2.6-2.4-.6-.6-2.4 2.6-2.6z"/>',
+  filter: '<path d="M3 5h18l-7 8v6l-4 2v-8L3 5z"/>',
+  check: '<circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.8 2.8L16.5 9.5"/>',
+  pin: '<path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+  heart: '<path d="M12 20s-7.5-4.6-9-9.5C2 7 4.3 4.5 7.2 4.5c2 0 3.6 1.2 4.8 3 1.2-1.8 2.8-3 4.8-3 2.9 0 5.2 2.5 4.2 6-1.5 4.9-9 9.5-9 9.5z"/>',
   shield: '<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>',
 };
 const icon = (k) =>
@@ -68,6 +73,7 @@ function page({ path, title, description, body, nav }) {
 <header class="top"><div class="wrap">
   <a class="brand" href="${r}" aria-label="Not Stock home"><img src="${r}assets/logo.png" alt="" width="52" height="31"><span class="word">Not <b>Stock</b></span></a>
   <nav class="nav" aria-label="Main">
+    <a href="${r}#market">Market</a>
     ${link('creators/', 'Creators', 'creators', 'hide-sm')}
     ${link('support/', 'Support', 'support')}
     ${link('legal/', 'Legal', 'legal')}
@@ -111,75 +117,112 @@ ${body}
 }
 
 // ---------- Pages ----------
-const FEATURES = [
-  ['warning', 'Warnings on the road', 'Police, hazards, road works and speed cameras, with the exact limit, reported live by drivers around you. Keeps warning in the background while you drive, where the law allows it.'],
-  ['radio', 'Drive with your crew', 'Start a party, see each other on the map and talk hands-free on the walkie-talkie. Invite your friends straight into the session.'],
-  ['people', 'Communities & car meets', 'Groups for your engine, your model or your scene. Public, private or invite-only, with moderators, and car meets with RSVPs.'],
-  ['car', 'Your garage', 'Every car you own with its mods and service history. Reminders for oil, APK and everything else before it’s due.'],
-  ['gauge', 'Performance meter', 'Measure 0–100 km/h, 100–200 and the quarter mile, and compare with your friends. Only where it’s legal and safe, like a track day.'],
-  ['tag', 'Buy & sell', 'Put your car up for sale with photos and details, or find your next project from drivers near you.'],
+const MARKET = [
+  ['wrench', 'The full build sheet', 'Every mod with brand, date, mileage and what it cost. Buyers see exactly what’s in the car and how much went into it, so a good build gets the price it deserves.'],
+  ['filter', 'Search like a car guy', 'Filter on tune stage, horsepower, documented builds and money spent on mods. Plus everything you’d expect: make, model, engine, price, year, km, gearbox and distance.'],
+  ['check', 'History you can check', 'Service history straight from the seller’s garage and the RDW odometer verdict on the number plate. Fewer surprises, more trust.'],
+  ['tag', 'Offers in the app', 'Make an offer with a message about the build, or contact the seller directly. Sellers mark the car as sold when it’s gone.'],
+  ['pin', 'Near you & trending', 'See what’s for sale around you and which builds everyone’s looking at right now.'],
+  ['heart', 'Save & follow the price', 'Save the cars you like and see when the price drops. Only you see what you saved.'],
 ];
+const MORE = [
+  ['people', 'Communities & meets', 'Groups for your engine, model or scene, public or private, and car meets with RSVPs.'],
+  ['radio', 'Your crew on the road', 'Drive together, see each other on the map and talk on the walkie-talkie.'],
+  ['warning', 'Live road warnings', 'Police, hazards and speed cameras with the exact limit, where the law allows it.'],
+  ['car', 'Your garage', 'Mods, service history and reminders for oil and APK. The same garage becomes your listing.'],
+  ['gauge', 'Performance meter', '0–100, 100–200 and the ¼ mile. Only where it’s legal and safe, like a track day.'],
+  ['camera', 'Feed & creators', 'Share your build, follow car creators and see what your friends are working on.'],
+];
+// Real app screenshots live in assets/screens/ (01-*.png, 02-*.png …). The section only shows when there are any.
+const SCREENS = (() => {
+  try {
+    return readdirSync(join(here, 'assets/screens')).filter((f) => /\.(png|jpe?g|webp)$/i.test(f)).sort();
+  } catch {
+    return [];
+  }
+})();
+const caption = (f) => f.replace(/^\d+[-_]?/, '').replace(/\.[a-z]+$/i, '').replace(/[-_]+/g, ' ');
 
 page({
   path: '/',
   nav: 'home',
-  title: 'Not Stock — the app for car people',
-  description: 'Live police and speed camera warnings, your crew on a walkie-talkie, communities and car meets, and a garage that remembers everything about your car.',
+  title: 'Not Stock — buy & sell tuned cars',
+  description: 'The marketplace for tuned and modified cars, made by and for car people. Every mod and the service history in one listing. Plus meets, crews and live road warnings.',
   body: `
 <section class="hero"><div class="wrap">
   <div>
-    <span class="kicker">The app for car people</span>
-    <h1>Your car isn't stock.<br><span class="o">Your app shouldn't be either.</span></h1>
-    <p class="lead">Live warnings on the road, your crew on a walkie-talkie, communities and car meets, and a garage that remembers everything about your car. All in one app, made in the Netherlands.</p>
+    <span class="kicker">The market for car people</span>
+    <h1>Buy &amp; sell <span class="o">tuned cars.</span></h1>
+    <p class="lead">Not Stock is the marketplace for modified cars, made by and for car people. Every mod, what it cost and the service history in one listing, so the right buyer sees what your build is worth. Plus meets, crews and live road warnings.</p>
     <div class="ctas">
       <span class="btn btn-soon" aria-label="Coming soon to the App Store"><svg width="18" height="22" viewBox="0 0 18 22" aria-hidden="true"><path fill="currentColor" d="M14.9 11.7c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2.1-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.5 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9-.1 0-2.7-1-2.7-4.1zM12.4 4.1c.7-.9 1.2-2 1-3.2-1 0-2.2.7-3 1.5-.6.7-1.2 1.9-1 3.1 1.1.1 2.3-.6 3-1.4z"/></svg><span><small>Coming soon to the</small>App Store</span></span>
-      <a class="btn btn-ghost" href="./support/">Questions? Support</a>
+      <a class="btn btn-ghost" href="#market">How it works</a>
     </div>
   </div>
   <div class="hero-art"><img src="./assets/logo.png" alt="The Not Stock logo: an N made of tyre marks and an S shaped like a racetrack" width="720" height="435"></div>
 </div></section>
 
-<div class="strip"><span>No ads</span><span>No tracking</span><span>Made in NL</span><span>Built by a driver</span></div>
-
-<section id="features"><div class="wrap">
-  <h2>Everything for the drive</h2>
-  <p class="sub">Not another navigation app. Not Stock is built around the people who actually enjoy driving, and the cars they put their time into.</p>
+<div class="strip"><span>Tuned cars</span><span>Documented builds</span><span>Car meets</span><span>Made in NL</span></div>
+${
+  SCREENS.length
+    ? `
+<section class="screens-sec"><div class="wrap">
+  <h2>See it in action</h2>
+  <div class="screens">
+    ${SCREENS.map((f) => `<figure class="phone"><img src="./assets/screens/${f}" alt="Not Stock: ${esc(caption(f))}" loading="lazy"><figcaption>${esc(caption(f))}</figcaption></figure>`).join('\n    ')}
+  </div>
+</div></section>`
+    : ''
+}
+<section id="market"><div class="wrap">
+  <h2>A market that gets tuned cars</h2>
+  <p class="sub">On normal car sites a tuned car is “modified, price on request”. On Not Stock the build is the selling point: buyers who know what a stage 2 or a proper exhaust is worth, and sellers who can show it.</p>
   <div class="grid">
-    ${FEATURES.map(([k, t, d]) => `<div class="card">${icon(k)}<h3>${esc(t)}</h3><p>${esc(d)}</p></div>`).join('\n    ')}
+    ${MARKET.map(([k, t, d]) => `<div class="card">${icon(k)}<h3>${esc(t)}</h3><p>${esc(d)}</p></div>`).join('\n    ')}
+  </div>
+  <div class="how">
+    <h3>Selling your car</h3>
+    <ol class="steps">
+      <li>Add your car to your garage once: mods, receipts, service history.</li>
+      <li>Tap <b>Sell a car</b>, add photos, price and city. The build sheet comes along automatically.</li>
+      <li>Get offers in the app, or let buyers contact you. Mark it as sold when it’s gone.</li>
+    </ol>
   </div>
 </div></section>
 
 <section class="alt"><div class="wrap">
-  <h2>Your data stays yours</h2>
-  <p class="sub">No ads, no analytics, no selling your data. New accounts start private, and you can go fully anonymous on the map with one tap. Your location is used on your phone and only shared when you choose to.</p>
+  <h2>More than a market</h2>
+  <p class="sub">Everything car people need in one app, so you’re already here when your next car comes up for sale.</p>
   <div class="grid">
-    <div class="card">${icon('shield')}<h3>Private by default</h3><p>Friends only, until you decide otherwise. You choose who can message you.</p></div>
-    <div class="card">${icon('camera')}<h3>Camera laws built in</h3><p>Speed camera warnings switch off by themselves in countries where they’re not allowed.</p></div>
-    <div class="card">${icon('warning')}<h3>Safe while driving</h3><p>Big buttons, voice warnings and no typing while you drive.</p></div>
+    ${MORE.map(([k, t, d]) => `<div class="card">${icon(k)}<h3>${esc(t)}</h3><p>${esc(d)}</p></div>`).join('\n    ')}
   </div>
-  <p class="note"><a href="./privacy/">Read the privacy policy</a> — in plain language.</p>
 </div></section>
 
 <section><div class="wrap">
+  <h2>Your data stays yours</h2>
+  <p class="sub">No ads, no analytics, no selling your data. New accounts start private, and your location is used on your phone and only shared when you choose to. <a href="./privacy/">Read the privacy policy</a>.</p>
+</div></section>
+
+<section class="alt"><div class="wrap">
   <h2>Free, or go Pro</h2>
-  <p class="sub">The map, all warnings, party chat, the feed and communities are free. Pro unlocks the extras for people who drive a lot.</p>
+  <p class="sub">Selling one car, the map, all warnings, the feed and communities are free. Pro is for people who sell more or drive a lot.</p>
   <div class="plans">
     <div class="plan">
       <div class="name">Free</div>
       <div class="price">€0</div>
-      <ul><li>Map, navigation and every warning</li><li>Warnings in the background while you drive</li><li>Party chat and walkie-talkie with your crew</li><li>Feed, communities and car meets</li><li>1 car in your garage, 1 car for sale</li></ul>
+      <ul><li>1 car for sale with 10 photos</li><li>Search, offers and saved cars</li><li>Map, navigation and every warning</li><li>Feed, communities and car meets</li><li>1 car in your garage</li></ul>
     </div>
     <div class="plan hot">
       <div class="name">Pro</div>
       <div class="price">€4.99 <small>/ month</small></div>
       <div class="note" style="margin-top:0">or €39.99 / year</div>
-      <ul><li>Auto-start: Not Stock starts when you drive</li><li>Police heat and a 30 km radio range</li><li>Unlimited garage with the full maintenance plan</li><li>Performance meter for 100–200 and ¼ mile</li><li>AI features, app colours and the Pro crown</li></ul>
+      <ul><li>Up to 3 cars for sale with 30 photos each</li><li>Unlimited garage with the full maintenance plan</li><li>Auto-start, police heat and a 30 km radio range</li><li>Performance meter for 100–200 and ¼ mile</li><li>AI features, app colours and the Pro crown</li></ul>
     </div>
   </div>
   <p class="note">Prices include VAT. Subscriptions are handled by Apple and can be cancelled any time. <a href="./subscriptions/">Subscription terms</a>.</p>
 </div></section>
 
-<section class="alt"><div class="wrap">
+<section><div class="wrap">
   <h2>For creators</h2>
   <p class="sub">Car creator on Instagram or TikTok? Get a creator profile that people follow, follower stats, and a chance at the blue check.</p>
   <a class="btn btn-primary" href="./creators/">Creator plans</a>
